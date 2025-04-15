@@ -8,7 +8,19 @@ public class Desafiro {
         System.out.println("***********************");
         System.out.println("\nNombre del cliente: " + nombre);
         System.out.println("El tipo de cuenta es: " + tipoDeCuenta);
-        System.out.println("Su saldo disponible es: " + saldo);
+        System.out.println("Su saldo disponible es: " + saldo + "$");
+        System.out.println("\n***********************");
 
+        String menu = """
+                *** Escriba el número de la opción deseada ***
+                1. Consultar saldo.
+                2. Retirar.
+                3. Depositar.
+                9. Salir.
+                """;
+
+        while (opcion != 9){
+
+        }
     }
 }
