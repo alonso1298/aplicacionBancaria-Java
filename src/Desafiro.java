@@ -32,19 +32,28 @@ public class Desafiro {
 
             switch (opcion) {
                 case 1:
-                    System.out.println("Su saldo es de: " + saldo);
+                    System.out.println("Su saldo actualizado es de: " + saldo);
                     break;
                 case 2:
                     System.out.println("Ingrese la cantidad a retirar: ");
                     retiro = teclado.nextDouble();
-                    saldo -= retiro;
-                    System.out.println("Su saldo disponible es: " + saldo);
+                    if(retiro > saldo){
+                        System.out.println("Saldo insuficiente");
+                    }else {
+                        System.out.printf(String.format("Se retiraron %.2f con exitó!", retiro));
+                        saldo -= retiro;
+                        System.out.println("\nSu saldo disponible es: " + saldo);
+                    }
                     break;
                 case 3:
                     System.out.println("Ingrese la cantidad a depositar: ");
                     ingreso = teclado.nextDouble();
-                    saldo += retiro;
-                System.out.println("Su saldo disponible es: " + saldo);
+                    saldo += ingreso;
+                    System.out.println("Su saldo disponible es: " + saldo);
+                    break;
+                case 9:
+                    System.out.println("Gracias por utilizar nuestros servicios, saliendo del programa");
+                    break;
                 default:
                     System.out.println("Opción inválida");
                     break;
